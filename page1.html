@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moment 1 - Ramverk 1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <nav class="nav nav-pills">
+            <a href="index.html" class="nav-link">Start</a>
+            <a href="page1.html" class="nav-link active">Ramverk 1</a>
+            <a href="page2.html" class="nav-link">Ramverk 2</a>
+        </nav>
+        <h1>Moment 1 - Bootstrap ramverk</h1>
+        <h2>Om Bootstrap</h2>
+        <p>Bootstrap är ett av de mest populära CSS ramverk. Bootstrap används för att designa en responsiv webbsida
+            lättare än vanlig CSS. Bootstrap är designat utifrån "mobile first" där antagandet
+            är att designen ska vara för mindre skärmar. Bootstrap fungerar som ett grid system med 12 kolumner där
+            kolumnerna kan användas för att placera föremål i önskvärd plats eller bredd.
+            Bootstrap kan användas genom att använda fördefinerade klasser i elementen för att komma åt den önskvärda
+            designen.</p>
+
+        <h2>Fördelar:</h2>
+        <ul class="list-group">
+            <li class="list-group-item">Man har kontroll över vilka element som ska designas</li>
+            <li class="list-group-item">Det krävs mindre CSS kod för att få en responsiv hemsida</li>
+            <li class="list-group-item">Man kan få flera funktionaliteter som dropdown, navbars, formulär etc. som är
+                fördesignade</li>
+            <li class="list-group-item">JavaScript och CSS kod är förprogrammerad vilket minskar utvecklingstiden</li>
+            <li class="list-group-item">Gridbaserat som gör det lättare att placera föremål</li>
+        </ul>
+        <h2>Nackdelar:</h2>
+        <ul class="list-group">
+            <li class="list-group-item">Det kräver inte mycket kodkompetens för att designa sidan vilket kan bidra till
+                att back-end utvecklare aldrig lär sig designa</li>
+            <li class="list-group-item">Hemsidor kan få liknande utseende</li>
+            <li class="list-group-item">Bootstrap CDN laddar hem alla funktionaliteter, även de som inte används</li>
+        </ul>
+
+        <p>Länk till ramverket <a href="https://getbootstrap.com/">Bootstrap</a></p>
+
+        <h2>Tabell över mina ägda bilar</h2>
+
+
+
+
+        <table class="table table-hover">
+            <thead class="table-light">
+                <tr>
+                    <th>#</th>
+                    <th>Bilmärke</th>
+                    <th>Modell</th>
+                    <th>Årsmodell</th>
+                    <th>Anskaffad</th>
+                    <th>Såld</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Honda</td>
+                    <td>CRV</td>
+                    <td>2006</td>
+                    <td>2013</td>
+                    <td class="bg-danger-subtle">2014</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Hyundai</td>
+                    <td>Getz</td>
+                    <td>2007</td>
+                    <td>2017</td>
+                    <td class="bg-danger-subtle">2019</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Skoda</td>
+                    <td>Fabia</td>
+                    <td>2014</td>
+                    <td>2019</td>
+                    <td class="bg-danger-subtle">2022</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Nissan</td>
+                    <td>Qashqai</td>
+                    <td>2016</td>
+                    <td>2021</td>
+                    <td class="bg-success-subtle">Ej såld</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Skoda</td>
+                    <td>Fabia</td>
+                    <td>2019</td>
+                    <td>2022</td>
+                    <td class="bg-success-subtle">Ej såld</td>
+                </tr>
+            </tbody>
+
+        </table>
+
+        <form>
+            <label  class="form-label"  for="carNo">Bilnummer</label>
+            <input type="number" min="1" max="99" name="carNo" id="carNo" class="form-control">
+            <label  class="form-label"  for="brand">Bilmärke</label>
+            <select name="brand" id="brand" class="form-select">
+                <option selected="">Välj bilmärke</option>
+                <option value="Audi">Audi</option>
+                <option value="BMW">BMW</option>
+                <option value="Mercedes">Mercedes</option>
+                <option value="Volvo">Volvo</option>
+                <option value="Toyota">Toyota</option>
+                <option value="Nissan">Nissan</option>
+                <option value="Honda">Honda</option>
+                <option value="Hyundai">Hyundai</option>
+                <option value="Mazda">Mazda</option>
+                <option value="Volkswagen">Volkswagen</option>
+                <option value="Skoda">Skoda</option>
+            </select><br>
+
+            <div class="form-floating">
+                <textarea class="form-control" name="model" id="model"></textarea>
+                <label class="model" for="model">Modell</label>
+
+            </div>
+
+            <label  class="form-label"  for="year">Årsmodell</label>
+            <input type="number" min="1900" max="2024" name="year" id="year" class="form-control">
+
+            <label  class="form-label"  for="acquired">Anskaffad</label>
+            <input type="number" name="acquired" id="acquired" min="2010" max="2023" class="form-control">
+
+            <div class="form-check">
+                <input type="checkbox" name="status" id="status" class="form-check-input" value="Ej såld">
+                <label for="status" class="form-check-label">Ej Såld</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Lägg till bil</button>
+        </form>
+
+
+
+    </div>
+
+</body>
+
+</html>
