@@ -1,14 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Test</title>
+    <title>Moment 1 - Ramverk 2</title>
 </head>
+
 <body>
-    <h1>Test</h1>
-    
+
+    <div class="container mx-auto px-2">
+        <nav class="my-5">
+            <a href="index.html"
+                class="px-3 py-3 border border-gray-400 hover:text-red-500 transition duration-300 ease-in-out hover:bg-gray-200">Start</a>
+            <a href="page1.html"
+                class="px-3 py-3 border border-gray-400 hover:text-red-500 transition duration-300 ease-in-out hover:bg-gray-200">Ramverk
+                1</a>
+            <a href="page2.html"
+                class="px-3 py-3 border border-gray-400 text-blue-500 hover:text-red-500 transition duration-300 ease-in-out hover:bg-gray-200">Ramverk
+                2</a>
+        </nav>
+        <h1 class="text-3xl">Moment 1 - Tailwind ramverk</h1>
+        <h2 class="text-2xl my-3">Om Tailwind</h2>
+
+        <p class="mb-3">Tailwind är ett CSS framework som är till för att underlätta utvecklarens designprocess genom att vara väldigt anpassningsbart, där alla byggstenar ges till utvecklaren. 
+            Så länge utvecklaren kommer över tröskeln att lära sig Tailwind blir det snabbare och lättare då man kan använda många kommandon/style för olika element.</p>
+
+        <h2 class="mb-2">Fördelar:</h2>
+        <ul class="list-disc ml-5 mb-3">
+            <li>Du behöver inte koda i CSS, skapa egna klasser eller id</li>
+            <li>Minimerar CSS kod / Minimerar DRY</li>
+            <li>Du kan anpassa designen snabbt med alla verktyg som ges</li>
+            <li>Får en responsiv hemsida</li>
+        </ul>
+        <h2 class="mb-2">Nackdelar:</h2>
+        <ul class="list-disc ml-5 mb-3">
+            <li>All design görs i HTML, det kan ibland bli svårt och identifiera pga designkod.</li>
+            <li>Inlärningskurva, det tar tid och lära sig, även med cheatsheet behövdes en del googling</li>
+            <li>Ingen "färdig" mall, med detta menar jag t.ex. navbaren som behövde designas från grunden, bootstrap räckte med en class</li>
+        </ul>
+
+        <p class="mb-3">Länk till ramverket <a class="text-blue-500 hover:text-red-500" href="https://tailwindcss.com/">Tailwind</a></p>
+
+        <table class="min-w-full text-left text-sm font-light">
+            <thead class="border-b border-t bg-white dark:border-neutral-500 dark:bg-neutral-600  text-center">
+                <tr>
+                    <th>#</th>
+                    <th>Bilmärke</th>
+                    <th>Modell</th>
+                    <th>Årsmodell</th>
+                    <th>Anskaffad</th>
+                    <th>Såld</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr
+                    class="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 dark:hover:bg-neutral-600 text-center">
+                    <td>1</td>
+                    <td>Honda</td>
+                    <td>CRV</td>
+                    <td>2006</td>
+                    <td>2013</td>
+                    <td class="bg-red-300">2014</td>
+                </tr>
+                <tr
+                    class="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 dark:hover:bg-neutral-600 text-center">
+                    <td>2</td>
+                    <td>Hyundai</td>
+                    <td>Getz</td>
+                    <td>2007</td>
+                    <td>2017</td>
+                    <td class="bg-red-300">2019</td>
+                </tr>
+                <tr
+                    class="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 dark:hover:bg-neutral-600 text-center">
+                    <td>3</td>
+                    <td>Skoda</td>
+                    <td>Fabia</td>
+                    <td>2014</td>
+                    <td>2019</td>
+                    <td class="bg-red-300">2022</td>
+                </tr>
+                <tr
+                    class="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 dark:hover:bg-neutral-600 text-center">
+                    <td>4</td>
+                    <td>Nissan</td>
+                    <td>Qashqai</td>
+                    <td>2016</td>
+                    <td>2021</td>
+                    <td class="bg-green-300">Ej såld</td>
+                </tr>
+                <tr
+                    class="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 dark:hover:bg-neutral-600 text-center">
+                    <td>5</td>
+                    <td>Skoda</td>
+                    <td>Fabia</td>
+                    <td>2019</td>
+                    <td>2022</td>
+                    <td class="bg-green-300">Ej såld</td>
+                </tr>
+            </tbody>
+
+        </table>
+
+        <form class="my-3">
+            <label for="carNo">Bilnummer</label><br>
+            <input type="number" min="1" max="99" name="carNo" id="carNo"
+                class=" shadow appearance-none border w-full h-10 px-3 text-blue-700 my-3 rounded"><br>
+            <label for="brand">Bilmärke</label><br>
+            <select name="brand" id="brand"
+                class="shadow appearance-none border w-full h-10 px-3 text-blue-700 my-3 rounded"><br>
+                <option selected="">Välj bilmärke</option>
+                <option value="Audi">Audi</option>
+                <option value="BMW">BMW</option>
+                <option value="Mercedes">Mercedes</option>
+                <option value="Volvo">Volvo</option>
+                <option value="Toyota">Toyota</option>
+                <option value="Nissan">Nissan</option>
+                <option value="Honda">Honda</option>
+                <option value="Hyundai">Hyundai</option>
+                <option value="Mazda">Mazda</option>
+                <option value="Volkswagen">Volkswagen</option>
+                <option value="Skoda">Skoda</option>
+            </select><br>
+
+            <div>
+                <label for="model">Modell</label><br>
+
+                <textarea class="shadow appearance-none border w-full h-40 px-3 py-3 text-blue-700 my-3" name="model"
+                    id="model"></textarea>
+
+            </div>
+
+            <label for="year">Årsmodell</label> <br>
+            <input type="number" min="1900" max="2024" name="year" id="year"
+                class="shadow appearance-none border w-full h-10 px-3 my-3 text-blue-700 rounded">
+
+            <label for="acquired">Anskaffad</label> <br>
+            <input type="number" name="acquired" id="acquired" min="2010" max="2023"
+                class="shadow appearance-none border w-full my-3 h-10 px-3 text-blue-700 rounded">
+
+            <div class="my-3">
+                <input type="checkbox" name="status" id="status" class="mr-2 leading-tight" value="Ej såld">
+                <label for="status" class="text-base">Ej Såld</label>
+            </div>
+
+            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Lägg till
+                bil</button>
+        </form>
+
+    </div>
+
 </body>
+
 </html>
